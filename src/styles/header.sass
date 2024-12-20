@@ -60,29 +60,28 @@ header
         align-items: center
 
         &-item
-          padding: 16px 26px
-          border-radius: 50px
-          transition: 0.2s ease-in-out
-          cursor: pointer
-
-          &:hover
-            background: common.$container-color
-            a
-              color: common.$on-container-color
-
-          &.active
-            background: common.$secondary-color
-            z-index: 10
-            a
-              color: common.$on-secondary-color
-
+          display: flex
           a
             margin: 0
-            padding: 0
+            padding: 16px 26px
             font-size: common.$font-size-label-large
             font-weight: common.$font-weight-label-large
             color: common.$on-container-color
             text-decoration: none
+            border-radius: 50px
+            transition: 0.2s ease-in-out
+            cursor: pointer
+            box-sizing: border-box
+
+            &:hover
+              background: common.$container-color
+              color: common.$on-container-color
+
+          &.active
+            a
+              color: common.$on-secondary-color
+              background: common.$secondary-color
+              z-index: 10
 
     &__actions-list
       margin: 0 0 0 auto
