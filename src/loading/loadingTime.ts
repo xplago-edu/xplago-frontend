@@ -8,7 +8,7 @@ addEventListener("load", _ => {
 function setLoadingTime(time: number) {
     const element = getLoadingTimeContentElement();
     if (element != null) {
-        element.textContent = "Site was loaded by " + time + " milliseconds";
+        element.textContent = "Site was loaded by " + time + " ms";
     }
 }
 
