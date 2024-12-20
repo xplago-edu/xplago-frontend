@@ -1,124 +1,234 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + TS</title>
-  </head>
-  <body>
-    <header>
-      <img src="/assets/icons/logo.svg" alt="logo icon">
-      <nav>
-        <ul>
-          <li>
-            <a href="#">Home</a>
-          </li>
-          <li>
-            <a href="#">Shop</a>
-          </li>
-          <li>
-            <a href="#">Sale</a>
-          </li>
-          <li>
-            <a href="#">Blog</a>
-          </li>
-        </ul>
-      </nav>
-      <ul>
-        <li>
-          <button>
-            <img src="/assets/icons/cart.svg" alt="cart icon">
-          </button>
-        </li>
-        <li>
-          <button>
-            <span>Login</span>
-          </button>
-        </li>
-        <li>
-          <button>
-            <span>Sign up</span>
-          </button>
-        </li>
-      </ul>
-    </header>
-    <main>
-      <section>
-        <span>New spring collection 2024</span>
-        <h1>Where style speaks, trends resonate, fashion flourishes</h1>
-        <p>Unveiling a fashion destination where trends blend seamlessly with your individual style aspirations. Discover today!</p>
-        <button>
-          <span>New collection</span>
-          <img src="/assets/icons/arrow-right.svg" alt="explore">
+<head>
+    <meta charset="UTF-8"/>
+    <link rel="icon" type="image/svg+xml" href="/vite.svg"/>
+    <link href="https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=SUSE:wght@100..800&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Style</title>
+</head>
+<body>
+<header>
+    <div class="header__wrapper">
+        <button class="header__wrapper__menu pressable">
+            <span></span>
+            <span></span>
+            <span></span>
         </button>
-        <div>
-          <ul>
-            <li>
-              <img src="/assets/promo/1.avif" alt="1"/>
-            </li>
-            <li>
-              <img src="/assets/promo/2.avif" alt="2"/>
-            </li>
-            <li>
-              <img src="/assets/promo/3.avif" alt="3"/>
-            </li>
-            <li>
-              <img src="/assets/promo/4.avif" alt="4"/>
-            </li>
-            <li>
-              <img src="/assets/promo/5.avif" alt="5"/>
-            </li>
-            <li>
-              <img src="/assets/promo/6.avif" alt="6"/>
-            </li>
-            <li>
-              <img src="/assets/promo/7.avif" alt="7"/>
-            </li>
-          </ul>
-          <button>
-            <img src="/assets/icons/arrow-left.svg" alt="previous">
-          </button>
-          <button>
-            <img src="/assets/icons/arrow-right.svg" alt="next">
-          </button>
-        </div>
-      </section>
-    </main>
-    <footer>
-      <img src="/assets/icons/logo.svg" alt="logo">
-      <section>
-        <nav>
-          <ul>
-            <li>
-              <a href="#">Home</a>
-            </li>
-            <li>
-              <a href="#">Shop</a>
-            </li>
-            <li>
-              <a href="#">Sale</a>
-            </li>
-            <li>
-              <a href="#">Blog</a>
-            </li>
-          </ul>
+        <img class="header__wrapper__logo" src="/assets/icons/logo-dark.svg" alt="logo icon">
+        <nav class="header__wrapper__navigation">
+            <ul class="header__wrapper__navigation__list">
+                <li class="header__wrapper__navigation__list-item pressable" id="navigation-home">
+                    <a href="/">Home</a>
+                </li>
+                <li class="header__wrapper__navigation__list-item pressable" id="navigation-shop">
+                    <a href="/shop/index.html">Shop</a>
+                </li>
+                <li class="header__wrapper__navigation__list-item pressable" id="navigation-sale">
+                    <a href="/sale/index.html">Sale</a>
+                </li>
+                <li class="header__wrapper__navigation__list-item pressable" id="navigation-blog">
+                    <a href="/blog/index.html">Blog</a>
+                </li>
+            </ul>
         </nav>
-      </section>
-      <section>
-        <ul>
-          <li>
-            <a href="#">Terms of Service</a>
-          </li>
-          <li>
-            <a href="#">Privacy Policy</a>
-          </li>
-          <li>
-            <a href="#">Cookies</a>
-          </li>
+        <ul class="header__wrapper__actions-list">
+            <li class="header__wrapper__actions-list-item default tablet mobile cart">
+                <button>
+                    <img src="/assets/icons/cart-dark.svg" alt="cart icon">
+                </button>
+                <span>15</span>
+            </li>
+            <li class="header__wrapper__actions-list-item default">
+                <button>
+                    <span>Login</span>
+                </button>
+            </li>
+            <li class="header__wrapper__actions-list-item default">
+                <button class="secondary white-light">
+                    <span>Sign up</span>
+                </button>
+            </li>
+            <li class="header__wrapper__actions-list-item default">
+                <button class="secondary white-light">
+                    <img src="/assets/icons/user-light.svg" alt="cart icon">
+                </button>
+            </li>
         </ul>
-      </section>
-    </footer>
-    <script type="module" src="/src/main.ts"></script>
-  </body>
+    </div>
+</header>
+<main>
+    <section class="promo">
+        <div class="promo__description">
+            <span class="promo__description-label">New spring collection 2024</span>
+            <h1>Where style speaks, trends resonate, fashion flourishes</h1>
+            <p>Unveiling a fashion destination where trends blend seamlessly with your individual style aspirations.
+                Discover today!</p>
+            <button class="promo__description-button white-light">
+                <span>New collection</span>
+                <span class="promo__description-button-icon">
+                    <img src="/assets/icons/arrow-right-dark.svg" alt="explore">
+                </span>
+            </button>
+        </div>
+        <div class="promo__list__wrapper">
+            <div class="promo__list__wrapper-box">
+                <ul class="promo__list__wrapper-box__list">
+                    <li class="promo__list__wrapper-box__list-item pressable">
+                        <img src="/assets/promo/1.avif" alt="1"/>
+                        <button class="pressable white-light">
+                            <span>More</span>
+                            <img src="/assets/icons/arrow-right-light.svg" alt="add to cart">
+                        </button>
+                    </li>
+                    <li class="promo__list__wrapper-box__list-item pressable">
+                        <img src="/assets/promo/2.avif" alt="2"/>
+                        <button class="pressable white-light">
+                            <span>More</span>
+                            <img src="/assets/icons/arrow-right-light.svg" alt="add to cart">
+                        </button>
+                    </li>
+                    <li class="promo__list__wrapper-box__list-item pressable">
+                        <img src="/assets/promo/3.avif" alt="3"/>
+                        <button class="pressable white-light">
+                            <span>More</span>
+                            <img src="/assets/icons/arrow-right-light.svg" alt="add to cart">
+                        </button>
+                    </li>
+                    <li class="promo__list__wrapper-box__list-item pressable">
+                        <img src="/assets/promo/4.avif" alt="4"/>
+                        <button class="pressable white-light">
+                            <span>More</span>
+                            <img src="/assets/icons/arrow-right-light.svg" alt="add to cart">
+                        </button>
+                    </li>
+                    <li class="promo__list__wrapper-box__list-item pressable">
+                        <img src="/assets/promo/5.avif" alt="5"/>
+                        <button class="pressable white-light">
+                            <span>More</span>
+                            <img src="/assets/icons/arrow-right-light.svg" alt="add to cart">
+                        </button>
+                    </li>
+                    <li class="promo__list__wrapper-box__list-item pressable">
+                        <img src="/assets/promo/6.avif" alt="6"/>
+                        <button class="pressable white-light">
+                            <span>More</span>
+                            <img src="/assets/icons/arrow-right-light.svg" alt="add to cart">
+                        </button>
+                    </li>
+                    <li class="promo__list__wrapper-box__list-item pressable">
+                        <img src="/assets/promo/7.avif" alt="7"/>
+                        <button class="pressable white-light">
+                            <span>More</span>
+                            <img src="/assets/icons/arrow-right-light.svg" alt="add to cart">
+                        </button>
+                    </li>
+                </ul>
+            </div>
+            <button class="promo__list__wrapper__page-button previous">
+                <img src="/assets/icons/arrow-left-dark.svg" alt="previous">
+            </button>
+            <button class="promo__list__wrapper__page-button next">
+                <img src="/assets/icons/arrow-right-dark.svg" alt="next">
+            </button>
+        </div>
+    </section>
+    <section class="popular">
+        <div class="popular__wrapper">
+            <h2 class="popular__wrapper__header pressable">Popular</h2>
+            <ul class="popular__wrapper__grid-list">
+                <li class="popular__wrapper__grid-list-item">
+                    <img src="/assets/promo/7.avif" alt="1">
+                    <h3>Jeans Jacket</h3>
+                    <span>199$</span>
+                    <button class="pressable">
+                        <img src="/assets/icons/plus-light.svg" alt="add to cart">
+                    </button>
+                </li>
+                <li class="popular__wrapper__grid-list-item">
+                    <img src="/assets/promo/6.avif" alt="2">
+                    <h3>Shirt</h3>
+                    <span>99$</span>
+                    <button class="pressable white-light">
+                        <img src="/assets/icons/plus-light.svg" alt="add to cart">
+                    </button>
+                </li>
+                <li class="popular__wrapper__grid-list-item">
+                    <img src="/assets/promo/5.avif" alt="3">
+                    <h3>Gray Sweater</h3>
+                    <span>169$</span>
+                    <button class="pressable white-light">
+                        <img src="/assets/icons/plus-light.svg" alt="add to cart">
+                    </button>
+                </li>
+                <li class="popular__wrapper__grid-list-item">
+                    <img src="/assets/promo/4.avif" alt="4">
+                    <h3>Cardigan</h3>
+                    <span>199$</span>
+                    <button class="pressable white-light">
+                        <img src="/assets/icons/plus-light.svg" alt="add to cart">
+                    </button>
+                </li>
+                <li class="popular__wrapper__grid-list-item">
+                    <img src="/assets/promo/3.avif" alt="4">
+                    <h3>Coat</h3>
+                    <span>499$</span>
+                    <button class="pressable white-light">
+                        <img src="/assets/icons/plus-light.svg" alt="add to cart">
+                    </button>
+                </li>
+                <li class="popular__wrapper__grid-list-item">
+                    <img src="/assets/promo/2.avif" alt="4">
+                    <h3>Blazer</h3>
+                    <span>299$</span>
+                    <button class="pressable white-light">
+                        <img src="/assets/icons/plus-light.svg" alt="add to cart">
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </section>
+</main>
+<footer>
+    <div class="footer__wrapper">
+        <img class="footer__wrapper__logo" src="/assets/icons/logo-light.svg" alt="logo">
+        <section class="footer__wrapper__navigation-section">
+            <nav class="footer__wrapper__navigation-section__nav">
+                <ul class="footer__wrapper__navigation-section__nav-list">
+                    <li class="footer__wrapper__navigation-section__nav-list-item active pressable white-light">
+                        <a href="#">Home</a>
+                    </li>
+                    <li class="footer__wrapper__navigation-section__nav-list-item pressable">
+                        <a href="#">Shop</a>
+                    </li>
+                    <li class="footer__wrapper__navigation-section__nav-list-item pressable">
+                        <a href="#">Sale</a>
+                    </li>
+                    <li class="footer__wrapper__navigation-section__nav-list-item pressable">
+                        <a href="#">Blog</a>
+                    </li>
+                </ul>
+            </nav>
+        </section>
+        <section class="footer__wrapper__documents-section">
+            <ul class="footer__wrapper__documents-section__list">
+                <li class="footer__wrapper__documents-section__list-item pressable">
+                    <a href="#">Terms of Service</a>
+                </li>
+                <li class="footer__wrapper__documents-section__list-item pressable">
+                    <a href="#">Privacy Policy</a>
+                </li>
+                <li class="footer__wrapper__documents-section__list-item pressable">
+                    <a href="#">Cookies</a>
+                </li>
+                <li class="footer__wrapper__documents-section__list-item pressable">
+                    <a href="#">Support</a>
+                </li>
+            </ul>
+        </section>
+    </div>
+</footer>
+<script type="module" src="/src/main.ts"></script>
+</body>
 </html>

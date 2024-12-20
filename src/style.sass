@@ -1,0 +1,29 @@
+@import "styles/common"
+@import "styles/header"
+@import "styles/content"
+@import "styles/footer"
+@import "styles/fill"
+
+html
+  margin: 0
+  padding: 0
+
+body
+  margin: 0
+  padding: 0
+  font-family: $main-font
+  font-optical-sizing: auto
+  font-weight: 400
+  font-style: normal
+  background: $background-color
+  overflow-x: hidden
+
+  &::-webkit-scrollbar
+    width: 10px
+  &::-webkit-scrollbar-track
+    background: transparent
+
+  &::-webkit-scrollbar-thumb
+    background-color: $container-color
+    border-radius: 20px
+    border: 2px solid $background-color

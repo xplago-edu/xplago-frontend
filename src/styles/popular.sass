@@ -1,0 +1,109 @@
+@import "common"
+
+.popular
+  padding: 40px 20px
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  box-sizing: border-box
+  width: 100%
+
+  &__wrapper
+    display: flex
+    flex-direction: column
+    width: 100%
+    max-width: 1200px
+    align-items: start
+
+    &__header
+      margin: 100px 30px 20px 30px
+      font-family: $accent-font
+      position: relative
+      display: flex
+      align-items: center
+      color: $on-background-color
+      font-size: $font-size-title-medium
+      font-weight: $font-weight-title-medium
+
+      &::after
+        position: absolute
+        left: calc(100% + 20px)
+        content: ""
+        background-image: url("/assets/icons/arrow-right-dark.svg")
+        background-size: cover
+        background-position: center
+        width: 32px
+        height: 32px
+
+    &__grid-list
+      margin: 0 auto
+      padding: 0
+      display: grid
+      max-width: 100%
+      width: auto
+      grid-template-columns: repeat(auto-fit, min(400px, 100vw))
+      align-items: center
+      list-style: none
+
+      &-item
+        display: grid
+        grid-template-areas: "img img img" "title price add"
+        grid-template-columns: 1fr auto auto
+        grid-template-rows: 1fr auto
+        align-items: center
+        justify-content: center
+        padding: 10px
+        margin: 20px
+        box-sizing: border-box
+        height: calc(100% - 40px)
+        background: $surface-color
+        border-radius: 50px
+
+        img
+          grid-area: img
+          object-fit: cover
+          height: 100%
+          width: 100%
+          border-radius: 40px
+
+        h3
+          grid-area: title
+          width: 100%
+          text-align: start
+          margin: 20px 30px
+          color: $on-surface-color
+          font-size: $font-size-body-large
+          font-weight: $font-weight-title-small
+
+        span
+          grid-area: price
+          padding: 10px 20px
+          margin: 20px 0 16px 10px
+          color: $on-container-color
+          background: $container-color
+          border-radius: 40px
+          font-size: $font-size-label-large
+          font-weight: $font-weight-label-large
+
+        button
+          grid-area: add
+          padding: 10px
+          margin: 20px 16px 16px 10px
+          display: flex
+          align-items: center
+          justify-content: center
+          color: $on-secondary-color
+          background: $secondary-color
+          border-radius: 40px
+          font-size: $font-size-label-large
+          font-weight: $font-weight-label-large
+          border: none
+
+          img
+            height: 19.5px
+            width: 19.5px
+
+@media all and (max-width: 500px)
+  .popular
+    padding: 0
