@@ -1,4 +1,4 @@
-@import "common"
+@use "common"
 
 .promo
   margin: 0 auto
@@ -21,27 +21,27 @@
     &-label
       padding: 16px 26px
       display: flex
-      color: $on-background-color
-      font-size: $font-size-body-small
-      font-weight: $font-weight-body-small
-      border: 1px solid $on-background-color
+      color: common.$on-background-color
+      font-size: common.$font-size-body-small
+      font-weight: common.$font-weight-body-small
+      border: 1px solid common.$on-background-color
       border-radius: 50px
 
     h1
       margin: 30px 0 20px 0
-      font-family: $accent-font
-      font-size: $font-size-title-large
-      font-weight: $font-weight-title-large
-      color: $on-background-color
+      font-family: common.$accent-font
+      font-size: common.$font-size-title-large
+      font-weight: common.$font-weight-title-large
+      color: common.$on-background-color
       max-width: 900px
       text-align: center
 
     p
       margin: 10px 0
       max-width: 500px
-      color: $on-background-color
-      font-size: $font-size-body-medium
-      font-weight: $font-weight-body-medium
+      color: common.$on-background-color
+      font-size: common.$font-size-body-medium
+      font-weight: common.$font-weight-body-medium
       text-align: center
       opacity: 0.7
 
@@ -49,7 +49,7 @@
       margin: 30px 0
       padding: 16px
       display: flex
-      background: $secondary-color
+      background: common.$secondary-color
       border: none
       border-radius: 50px
       align-items: center
@@ -57,14 +57,14 @@
 
       span
         margin: 0 10px
-        color: $on-secondary-color
-        font-size: $font-size-label-large
-        font-weight: $font-weight-label-large
+        color: common.$on-secondary-color
+        font-size: common.$font-size-label-large
+        font-weight: common.$font-weight-label-large
 
       &-icon
         padding: 5px
         display: flex
-        background: $background-color
+        background: common.$background-color
         border-radius: 50px
 
         img
@@ -87,7 +87,7 @@
       left: 0
       height: 100%
       width: 100px
-      background: linear-gradient(90deg, $background-color, transparent)
+      background: linear-gradient(90deg, common.$background-color, transparent)
       z-index: 10
 
     &::after
@@ -98,7 +98,7 @@
       right: 0
       height: 100%
       width: 100px
-      background: linear-gradient(-90deg, $background-color, transparent)
+      background: linear-gradient(-90deg, common.$background-color, transparent)
       z-index: 10
 
     &-box
@@ -143,16 +143,16 @@
             margin: 20px 16px 16px 10px
             align-items: center
             justify-content: center
-            color: $on-secondary-color
-            background: $secondary-color
+            color: common.$on-secondary-color
+            background: common.$secondary-color
             border-radius: 40px
-            font-size: $font-size-label-large
-            font-weight: $font-weight-label-large
+            font-size: common.$font-size-label-large
+            font-weight: common.$font-weight-label-large
             border: none
             opacity: 0
 
             span
-              font-size: $font-size-label-medium
+              font-size: common.$font-size-label-medium
 
             img
               height: 19.5px
@@ -167,7 +167,7 @@
       padding: 16px
       position: absolute
       display: flex
-      background: $surface-blur-color
+      background: common.$surface-blur-color
       border-radius: 50px
       border: none
       backdrop-filter: blur(20px)

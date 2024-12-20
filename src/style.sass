@@ -1,8 +1,8 @@
-@import "styles/common"
-@import "styles/header"
-@import "styles/content"
-@import "styles/footer"
-@import "styles/fill"
+@use "styles/common"
+@use "styles/header"
+@use "styles/content"
+@use "styles/footer"
+@use "styles/fill"
 
 html
   margin: 0
@@ -11,11 +11,11 @@ html
 body
   margin: 0
   padding: 0
-  font-family: $main-font
+  font-family: common.$main-font
   font-optical-sizing: auto
   font-weight: 400
   font-style: normal
-  background: $background-color
+  background: common.$background-color
   overflow-x: hidden
 
   &::-webkit-scrollbar
@@ -24,6 +24,6 @@ body
     background: transparent
 
   &::-webkit-scrollbar-thumb
-    background-color: $container-color
+    background-color: common.$container-color
     border-radius: 20px
-    border: 2px solid $background-color
+    border: 2px solid common.$background-color

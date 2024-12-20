@@ -1,11 +1,11 @@
-@import "common"
+@use "common"
 
 footer
   position: relative
   display: flex
   align-items: center
   justify-content: center
-  background: $secondary-color
+  background: common.$secondary-color
 
   .footer__wrapper
     padding: 20px 20px
@@ -20,7 +20,7 @@ footer
       margin: 20px
       grid-area: logo
       width: 256px
-      stroke: $on-secondary-color
+      stroke: common.$on-secondary-color
 
     &__navigation-section
       grid-area: navigation
@@ -52,12 +52,12 @@ footer
             cursor: pointer
 
             &:hover
-              border: 1px solid $on-secondary-color
+              border: 1px solid common.$on-secondary-color
 
             &.active
-              background: $on-secondary-color
+              background: common.$on-secondary-color
               a
-                color: $secondary-color
+                color: common.$secondary-color
               &::before
                 background-image: url("../assets/icons/arrow-right-dark.svg")
 
@@ -68,11 +68,11 @@ footer
               left: 15px
               height: 16px
               width: 16px
-              color: $secondary-color
+              color: common.$secondary-color
               background-image: url("../assets/icons/arrow-right-light.svg")
 
           a
-            color: $background-color
+            color: common.$background-color
             text-decoration: none
 
     &__documents-section
@@ -101,12 +101,12 @@ footer
           cursor: pointer
 
           &:hover
-            border: 1px solid $on-secondary-color
+            border: 1px solid common.$on-secondary-color
 
           &.active
-            background: $on-secondary-color
+            background: common.$on-secondary-color
             a
-              color: $secondary-color
+              color: common.$secondary-color
             &::before
               background-image: url("../assets/icons/arrow-right-light.svg")
 
@@ -117,11 +117,11 @@ footer
             left: 15px
             height: 16px
             width: 16px
-            color: $on-background-color
+            color: common.$on-background-color
             background-image: url("../assets/icons/arrow-right-light.svg")
 
         a
-          color: $background-color
+          color: common.$background-color
           text-decoration: none
 
 @media all and (max-width: 1000px)

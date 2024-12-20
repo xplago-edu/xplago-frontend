@@ -1,4 +1,4 @@
-@import "common"
+@use "common"
 
 .fill
   display: flex
@@ -15,9 +15,9 @@
 
     h1
       margin: 30px 0 20px 0
-      font-family: $accent-font
-      font-size: $font-size-title-large
-      font-weight: $font-weight-title-large
-      color: $on-background-color
+      font-family: common.$accent-font
+      font-size: common.$font-size-title-large
+      font-weight: common.$font-weight-title-large
+      color: common.$on-background-color
       max-width: 900px
       text-align: center

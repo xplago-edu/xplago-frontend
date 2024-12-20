@@ -1,4 +1,4 @@
-@import "common"
+@use "common"
 
 .popular
   padding: 40px 20px
@@ -18,13 +18,13 @@
 
     &__header
       margin: 100px 30px 20px 30px
-      font-family: $accent-font
+      font-family: common.$accent-font
       position: relative
       display: flex
       align-items: center
-      color: $on-background-color
-      font-size: $font-size-title-medium
-      font-weight: $font-weight-title-medium
+      color: common.$on-background-color
+      font-size: common.$font-size-title-medium
+      font-weight: common.$font-weight-title-medium
 
       &::after
         position: absolute
@@ -57,7 +57,7 @@
         margin: 20px
         box-sizing: border-box
         height: calc(100% - 40px)
-        background: $surface-color
+        background: common.$surface-color
         border-radius: 50px
 
         img
@@ -72,19 +72,19 @@
           width: 100%
           text-align: start
           margin: 20px 30px
-          color: $on-surface-color
-          font-size: $font-size-body-large
-          font-weight: $font-weight-title-small
+          color: common.$on-surface-color
+          font-size: common.$font-size-body-large
+          font-weight: common.$font-weight-title-small
 
         span
           grid-area: price
           padding: 10px 20px
           margin: 20px 0 16px 10px
-          color: $on-container-color
-          background: $container-color
+          color: common.$on-container-color
+          background: common.$container-color
           border-radius: 40px
-          font-size: $font-size-label-large
-          font-weight: $font-weight-label-large
+          font-size: common.$font-size-label-large
+          font-weight: common.$font-weight-label-large
 
         button
           grid-area: add
@@ -93,11 +93,11 @@
           display: flex
           align-items: center
           justify-content: center
-          color: $on-secondary-color
-          background: $secondary-color
+          color: common.$on-secondary-color
+          background: common.$secondary-color
           border-radius: 40px
-          font-size: $font-size-label-large
-          font-weight: $font-weight-label-large
+          font-size: common.$font-size-label-large
+          font-weight: common.$font-weight-label-large
           border: none
 
           img

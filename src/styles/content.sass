@@ -1,5 +1,6 @@
-@import "promo"
-@import "popular"
+@use "common"
+@use "promo"
+@use "popular"
 
 main
   padding: 100px 20px 50px 20px
@@ -7,7 +8,7 @@ main
   flex-direction: column
   width: 100vw
   align-items: stretch
-  background: $background-color
+  background: common.$background-color
   box-sizing: border-box
 
 @media all and (max-width: 500px)

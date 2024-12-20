@@ -1,4 +1,4 @@
-@import "common"
+@use "common"
 
 header
   position: fixed
@@ -8,7 +8,7 @@ header
   padding: 20px 40px
   width: 100vw
   backdrop-filter: blur(20px)
-  background: $background-blur-color
+  background: common.$background-blur-color
   align-items: center
   justify-content: center
   box-sizing: border-box
@@ -35,10 +35,10 @@ header
       background: transparent
 
       &:hover
-        background: $surface-color
+        background: common.$surface-color
 
       span
-        background: $on-surface-color
+        background: common.$on-surface-color
         border-radius: 5px
         height: 3px
         width: 100%
@@ -54,7 +54,7 @@ header
         padding: 0
         margin: 0
         display: flex
-        background: $surface-color
+        background: common.$surface-color
         border-radius: 50px
         list-style: none
         align-items: center
@@ -66,22 +66,22 @@ header
           cursor: pointer
 
           &:hover
-            background: $container-color
+            background: common.$container-color
             a
-              color: $on-container-color
+              color: common.$on-container-color
 
           &.active
-            background: $secondary-color
+            background: common.$secondary-color
             z-index: 10
             a
-              color: $on-secondary-color
+              color: common.$on-secondary-color
 
           a
             margin: 0
             padding: 0
-            font-size: $font-size-label-large
-            font-weight: $font-weight-label-large
-            color: $on-container-color
+            font-size: common.$font-size-label-large
+            font-weight: common.$font-weight-label-large
+            color: common.$on-container-color
             text-decoration: none
 
     &__actions-list
@@ -108,17 +108,17 @@ header
             top: -5px
             right: -5px
             padding: 5px 7px
-            background: $secondary-color
-            color: $on-secondary-color
+            background: common.$secondary-color
+            color: common.$on-secondary-color
             border-radius: 20px
-            font-size: $font-size-label-small
+            font-size: common.$font-size-label-small
 
         button
           margin: 0
           padding: 16px 16px
           display: flex
           border-radius: 50px
-          background: $surface-color
+          background: common.$surface-color
           border: none
           transition: 0.2s ease-in-out
           align-items: center
@@ -126,9 +126,9 @@ header
           cursor: pointer
 
           &.secondary
-            background: $secondary-color
+            background: common.$secondary-color
             span
-              color: $on-secondary-color
+              color: common.$on-secondary-color
 
           img
             height: 20px
@@ -136,9 +136,9 @@ header
 
           span
             margin: 0 10px
-            color: $on-surface-color
-            font-size: $font-size-label-large
-            font-weight: $font-weight-label-large
+            color: common.$on-surface-color
+            font-size: common.$font-size-label-large
+            font-weight: common.$font-weight-label-large
 
 @media all and (max-width: 1180px)
   header
