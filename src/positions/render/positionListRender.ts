@@ -5,14 +5,16 @@ const positions = positionsStorage.getPublicPositions();
 
 const popularWrapper = document.getElementsByClassName("popular__wrapper")[0] as HTMLElement;
 
-const list = new PositionListElement()
+if (popularWrapper) {
+    const list = new PositionListElement()
 
-for (const position of positions) {
-    list.addChild(new PopularPositionElement(
-        position,
-        cartService,
-        list
-    ));
+    for (const position of positions) {
+        list.addChild(new PopularPositionElement(
+            position,
+            cartService,
+            list
+        ));
+    }
+
+    list.renderAll(popularWrapper);
 }
-
-list.renderAll(popularWrapper);

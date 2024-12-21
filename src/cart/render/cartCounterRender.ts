@@ -3,9 +3,7 @@ import {CartCounter} from "../elements/cartCounter.ts";
 
 const cartCounterLink = document.getElementById("cart-counter-button");
 
-console.log("cartCounterLink", cartCounterLink);
-
-if (cartCounterLink != null) {
+if (cartCounterLink) {
     const cartCounter = new CartCounter(
         cartService
     )

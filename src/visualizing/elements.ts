@@ -15,7 +15,12 @@ export abstract class AbstractElement {
 
     public renderAll(parent: HTMLElement): void {
         this.parentElement = parent;
-        parent.appendChild(this.compose() as Node);
+        console.log(parent)
+        const composeElement = this.compose();
+
+        if (composeElement) {
+            parent.appendChild(composeElement);
+        }
     }
 
     public addChild(element: AbstractElement): AbstractElement {
