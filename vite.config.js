@@ -10,6 +10,7 @@ export default defineConfig({
                 sale: resolve(__dirname, 'sale/index.html'),
                 blog: resolve(__dirname, 'blog/index.html'),
                 cart: resolve(__dirname, 'cart/index.html'),
+                user: resolve(__dirname, 'user/index.html'),
             },
         },
     },
