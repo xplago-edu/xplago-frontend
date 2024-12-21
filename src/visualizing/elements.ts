@@ -42,7 +42,10 @@ export abstract class AbstractElement {
         element.setAttribute("elementId", this.elementId);
 
         for (const child of this.children) {
-            element.appendChild(child.render() as Node)
+            const childElement = child.render();
+            if (childElement != null) {
+                element.appendChild(childElement as Node);
+            }
         }
 
         return element;

@@ -1,12 +1,14 @@
 import {cartService} from "../../singletons.ts";
 import {CartCounter} from "../elements/cartCounter.ts";
 
-const cartCounterButton = document.getElementById("cart-counter-button");
+const cartCounterLink = document.getElementById("cart-counter-button");
 
-if (cartCounterButton != null) {
+console.log("cartCounterLink", cartCounterLink);
+
+if (cartCounterLink != null) {
     const cartCounter = new CartCounter(
         cartService
     )
 
-    cartCounter.renderAll(cartCounterButton);
+    cartCounter.renderAll(cartCounterLink);
 }

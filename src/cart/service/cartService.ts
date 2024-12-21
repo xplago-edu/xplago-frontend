@@ -6,6 +6,10 @@ export class CartService {
     private storage: CartStorage = new CartStorage()
     private countCallbacks: ((count: number) => void)[] = [];
 
+    public getItems(): PositionItem[] {
+        return this.storage.getPositionItems();
+    }
+
     public addPosition(position: PositionInfo): PositionItem {
         const items = this.storage.getPositionItems();
 

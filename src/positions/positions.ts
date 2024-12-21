@@ -1,1 +1,1 @@
-import "./render/positionRender.ts";
+import "./render/positionListRender.ts";
