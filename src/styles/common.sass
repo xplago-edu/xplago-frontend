@@ -1,0 +1,86 @@
+$main-font: "Inter", sans-serif
+$accent-font: "SUSE", sans-serif
+
+$secondary-color: #ffffff
+$on-secondary-color: #000000
+$background-color: #111111
+$on-background-color: #ffffff
+$background-blur-color: rgba(16, 16, 16, 0.5)
+$on-background-blur-color: #ffffff
+$surface-color: #1e1e1e
+$on-surface-color: #ffffff
+$surface-blur-color: rgba(36, 36, 36, 0.8)
+$on-surface-blur-color: #ffffff
+$container-color: #333333
+$on-container-color: #ffffff
+
+$font-size-label-small: 12px
+$font-size-label-medium: 14px
+$font-size-label-large: 16px
+
+$font-size-body-small: 14px
+$font-size-body-medium: 16px
+$font-size-body-large: 18px
+
+$font-size-title-small: 24px
+$font-size-title-medium: 32px
+$font-size-title-large: 48px
+
+$font-weight-label-small: 500
+$font-weight-label-medium: 500
+$font-weight-label-large: 500
+
+$font-weight-body-small: 300
+$font-weight-body-medium: 300
+$font-weight-body-large: 300
+
+$font-weight-title-small: 500
+$font-weight-title-medium: 500
+$font-weight-title-large: 500
+
+@mixin noselect
+  -webkit-touch-callout: none
+  -webkit-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  user-select: none
+
+.noselect
+  @include noselect
+
+button, .pressable
+  transform: scale(1)
+  transition: 0.1s ease-in-out
+  cursor: pointer
+  @include noselect
+
+  &:hover
+    transform: scale(1.1)
+
+  &:active
+    transform: scale(0.9)
+
+img
+  @include noselect
+
+.white-light
+  box-shadow: 0 5px 20px rgba(255, 255, 255, 0.3)
+
+#loading-time-box
+  position: fixed
+  padding: 10px 20px
+  bottom: 10px
+  right: 10px
+  display: flex
+  justify-content: center
+  align-items: center
+  background: $secondary-color
+  border-radius: 20px
+  z-index: 1000
+  color: $on-secondary-color
+  font-size: $font-size-label-large
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.15)
+
+  img
+    margin: 0 10px 0 0
+    width: 20px

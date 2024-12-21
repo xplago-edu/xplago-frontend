@@ -1,0 +1,199 @@
+@use "common"
+
+.promo
+  margin: 0 auto
+  display: flex
+  padding: 0 20px
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  width: 100%
+  box-sizing: border-box
+
+  .promo__description
+    padding: 60px 0
+    display: flex
+    flex-direction: column
+    width: 100%
+    align-items: center
+    box-sizing: border-box
+
+    &-label
+      padding: 16px 26px
+      display: flex
+      color: common.$on-background-color
+      font-size: common.$font-size-body-small
+      font-weight: common.$font-weight-body-small
+      border: 1px solid common.$on-background-color
+      border-radius: 50px
+
+    h1
+      margin: 30px 0 20px 0
+      font-family: common.$accent-font
+      font-size: common.$font-size-title-large
+      font-weight: common.$font-weight-title-large
+      color: common.$on-background-color
+      max-width: 900px
+      text-align: center
+
+    p
+      margin: 10px 0
+      max-width: 500px
+      color: common.$on-background-color
+      font-size: common.$font-size-body-medium
+      font-weight: common.$font-weight-body-medium
+      text-align: center
+      opacity: 0.7
+
+    &-button
+      margin: 30px 0
+      padding: 16px
+      display: flex
+      background: common.$secondary-color
+      border: none
+      border-radius: 50px
+      align-items: center
+      justify-content: center
+
+      span
+        margin: 0 10px
+        color: common.$on-secondary-color
+        font-size: common.$font-size-label-large
+        font-weight: common.$font-weight-label-large
+
+      &-icon
+        padding: 5px
+        display: flex
+        background: common.$background-color
+        border-radius: 50px
+
+        img
+          height: 16px
+          width: 16px
+
+  .promo__list__wrapper
+    position: relative
+    display: flex
+    align-items: center
+    width: 100%
+    height: 100%
+    max-width: 1200px
+
+    &::before
+      content: ""
+      position: absolute
+      display: flex
+      top: 0
+      left: 0
+      height: 100%
+      width: 100px
+      background: linear-gradient(90deg, common.$background-color, transparent)
+      z-index: 10
+
+    &::after
+      content: ""
+      position: absolute
+      display: flex
+      top: 0
+      right: 0
+      height: 100%
+      width: 100px
+      background: linear-gradient(-90deg, common.$background-color, transparent)
+      z-index: 10
+
+    &-box
+      position: relative
+      display: flex
+      overflow-x: scroll
+      width: 100%
+      height: 100%
+
+      &::-webkit-scrollbar
+        display: none
+
+      &__list
+        margin: 0
+        padding: 50px 100px
+        height: 100%
+        width: fit-content
+        display: flex
+        min-height: min-content
+        list-style: none
+
+        &-item
+          margin: 0 10px
+          flex: 1
+          display: flex
+          height: min(400px)
+          width: min(300px, calc(100vw - 40px))
+
+          > img
+            object-fit: cover
+            height: 100%
+            width: 100%
+            border-radius: 50px
+
+          > button
+            display: flex
+            position: absolute
+            bottom: 10px
+            right: 10px
+            grid-area: add
+            padding: 10px
+            margin: 20px 16px 16px 10px
+            align-items: center
+            justify-content: center
+            color: common.$on-secondary-color
+            background: common.$secondary-color
+            border-radius: 40px
+            font-size: common.$font-size-label-large
+            font-weight: common.$font-weight-label-large
+            border: none
+            opacity: 0
+
+            span
+              font-size: common.$font-size-label-medium
+
+            img
+              height: 19.5px
+              width: 19.5px
+
+          &:hover
+            button
+              opacity: 1
+              transition: 0.1s ease-in-out
+
+    &__page-button
+      padding: 16px
+      position: absolute
+      display: flex
+      background: common.$surface-blur-color
+      border-radius: 50px
+      border: none
+      backdrop-filter: blur(20px)
+      z-index: 20
+
+      img
+        height: 20px
+        width: 20px
+
+      &.previous
+        left: 30px
+
+      &.next
+        right: 30px
+
+@media all and (max-width: 1000px)
+  .promo
+    .promo__list__wrapper
+      &::before
+        display: none
+      &::after
+        display: none
+
+    .promo__list__wrapper-box__list
+      padding: 0
+
+    .promo__list__wrapper-box__list-item
+      height: min(100vw, 400px)
+      width: min(100vw, 300px)

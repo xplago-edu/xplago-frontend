@@ -1,0 +1,23 @@
+@use "common"
+
+.fill
+  display: flex
+  justify-content: center
+  align-items: center
+  height: calc(100vh - 150px)
+  width: 100%
+
+  &__description
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+
+    h1
+      margin: 30px 0 20px 0
+      font-family: common.$accent-font
+      font-size: common.$font-size-title-large
+      font-weight: common.$font-weight-title-large
+      color: common.$on-background-color
+      max-width: 900px
+      text-align: center
