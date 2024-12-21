@@ -1,4 +1,4 @@
-const basePath = import.meta.env.BASE_URL;
+export const basePath = import.meta.env.BASE_URL;
 
 export type RouteInfo = {
     name: string,

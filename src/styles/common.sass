@@ -38,16 +38,30 @@ $font-weight-title-small: 500
 $font-weight-title-medium: 500
 $font-weight-title-large: 500
 
+@mixin noselect
+  -webkit-touch-callout: none
+  -webkit-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  user-select: none
+
+.noselect
+  @include noselect
+
 button, .pressable
   transform: scale(1)
   transition: 0.1s ease-in-out
   cursor: pointer
+  @include noselect
 
   &:hover
     transform: scale(1.1)
 
   &:active
     transform: scale(0.9)
+
+img
+  @include noselect
 
 .white-light
   box-shadow: 0 5px 20px rgba(255, 255, 255, 0.3)

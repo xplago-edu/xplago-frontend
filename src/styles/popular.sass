@@ -104,6 +104,18 @@
             height: 19.5px
             width: 19.5px
 
+        &.cart
+          grid-template-areas: "img img img img" "title remove price add"
+          grid-template-columns: 1fr auto auto auto
+
+          button.remove
+            margin: 20px 0 16px 10px
+            grid-area: remove
+
+          button.add
+            grid-area: add
+
+
 @media all and (max-width: 500px)
   .popular
     padding: 0
